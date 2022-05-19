@@ -1,0 +1,27 @@
+﻿<Window x:Class="WPFhello.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFhello"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name="MainGrid">
+        <Label Content="Hello, WPF!" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="93" Width="648" FontSize="72" FontFamily="Showcard Gothic"/>
+        <Button x:Name="btnHello" Content="Здрасти!" HorizontalAlignment="Left" Margin="96,321,0,0" VerticalAlignment="Top" Width="141" Click="btnHello_Click" Height="40" RenderTransformOrigin="0.506,0.517"/>
+        <GroupBox x:Name="gbUser" Header="" HorizontalAlignment="Left" Height="410" Margin="10,0,0,0" VerticalAlignment="Top" Width="774">
+            <ListBox x:Name="peopleListBox"  Height="116" Margin="647,0,18,0" SelectionChanged="ListBox_SelectionChanged">
+                <ListBoxItem x:Name="Mike" Content="Mike"/>
+                <ListBoxItem x:Name="Lisa" Content="Lisa"/>
+                <ListBoxItem x:Name="John" Content="John"/>
+                <ListBoxItem x:Name="Mary" Content="Mary"/>
+            </ListBox>
+        </GroupBox>
+        <Button x:Name="listControlButton" Content="Здрасти!" HorizontalAlignment="Left" Margin="375,321,0,0" VerticalAlignment="Top" Width="141" Click="btnHandleList" Height="40" RenderTransformOrigin="0.506,0.517"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="33" Margin="96,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="141"/>
+        <TextBox x:Name="tbone" HorizontalAlignment="Left" Height="31" Margin="96,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="141"/>
+        <TextBox x:Name="tbtwo" HorizontalAlignment="Left" Height="28" Margin="96,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="141"/>
+        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial Black" Height="30" Width="151" Margin="375,217,0,0">I edit xaml with style</TextBlock>
+        <Button HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Height="50" Click="Btn_Click">Click me!</Button>
+    </Grid>
+</Window>

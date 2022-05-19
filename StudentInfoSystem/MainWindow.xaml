@@ -1,0 +1,60 @@
+﻿<Window x:Class="StudentInfoSystem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StudentInfoSystem"
+        mc:Ignorable="d"
+        Title="Студентска информационна система" Height="450" Width="800">
+    <Window.Resources>
+        <BitmapImage x:Key="DefaultImage" UriSource="imgFailed.png" />
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition MaxWidth="300"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="135"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition MaxHeight="30"></RowDefinition>
+        </Grid.RowDefinitions>
+        <GroupBox Grid.Column="1" Grid.Row="0" x:Name="studentPersonalInfoGroupBox" Header="Лични данни" VerticalAlignment="Top">
+            <Grid HorizontalAlignment="Left" Height="104" Margin="10,10,0,0" VerticalAlignment="Top" Width="365">
+                <Label Content="Име:" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.611,1.024"/>
+                <TextBox x:Name="firstNameTxtBox" Text="{Binding Path=GivenName}" HorizontalAlignment="Left" Height="23" Margin="78,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <Label Content="Презиме:" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="secondNameTxtBox" Text="{Binding Path=MiddleName}" HorizontalAlignment="Left" Height="23" Margin="78,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <Label Content="Фамилия:" HorizontalAlignment="Left" Margin="10,68,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.224,2.257"/>
+                <TextBox x:Name="thirdNameTxtBox" Text="{Binding Path=FamilyName}" HorizontalAlignment="Left" Height="23" Margin="78,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+            </Grid>
+        </GroupBox>
+        <GroupBox Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" x:Name="studentUniInfoGroupBox" Header="Студентска информация"  VerticalAlignment="Center">
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Label Content="Факултет:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
+                <Label Content="Специалност:" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
+                <Label Content="ОКС:" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top"/>
+                <Label Content="Статус:" HorizontalAlignment="Left" Margin="10,103,0,0" VerticalAlignment="Top"/>
+                <Label Content="Фак. номер:" HorizontalAlignment="Left" Margin="19,134,0,0" VerticalAlignment="Top"/>
+                <Label Content="Курс:" HorizontalAlignment="Left" Margin="252,10,0,0" VerticalAlignment="Top"/>
+                <Label Content="Поток:" HorizontalAlignment="Left" Margin="252,41,0,0" VerticalAlignment="Top"/>
+                <Label Content="Група:" HorizontalAlignment="Left" Margin="252,72,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="fakultetTxtBox" Text="{Binding Path=Faculty}" HorizontalAlignment="Left" Height="23" Margin="77,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="specialnostTxtBox" Text="{Binding Path=Specialization}" HorizontalAlignment="Left" Height="23" Margin="99,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="OKSTxtBox" Text="{Binding Path=EduDegree}" HorizontalAlignment="Left" Height="23" Margin="51,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <ComboBox x:Name="statusBox" SelectedItem="{Binding Path=Status}" HorizontalAlignment="Left" Height="23" Margin="62,107,0,0" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="fakNomerTxtBox" Text="{Binding Path=FacNum}" HorizontalAlignment="Left" Height="23" Margin="99,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="kursTxtBox" Text="{Binding Path=Kurs}" HorizontalAlignment="Left" Height="23" Margin="300,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62"/>
+                <TextBox x:Name="potokTxtBox" Text="{Binding Path=Potok}" HorizontalAlignment="Left" Height="23" Margin="300,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62"/>
+                <TextBox x:Name="grupaTxtBox" Text="{Binding Path=Group}" HorizontalAlignment="Left" Height="23" Margin="300,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62"/>
+            </Grid>
+        </GroupBox>
+        <Button Grid.Row="3" Grid.Column="1" x:Name="clearAllBtn" Content="Clear All" Width="75" HorizontalAlignment="Center"  VerticalAlignment="Center" Click="ClearAllBtn_Click"/>
+        <Button Grid.Row="3" Grid.Column="1" x:Name="toggleEnabledBtn" Content="Toggle Enabled All" HorizontalAlignment="Left"  VerticalAlignment="Center" Width="108" Click="ToggleEnabledBtn_Click"/>
+        <GroupBox Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" VerticalAlignment="Center" HorizontalAlignment="Center" Header="Снимка">
+            <Image x:Name="pfp" Source="{Binding PfpSrc,FallbackValue={StaticResource DefaultImage}}" HorizontalAlignment="Center" Height="167" VerticalAlignment="Center" Width="167"/>
+        </GroupBox>
+    </Grid>
+</Window>

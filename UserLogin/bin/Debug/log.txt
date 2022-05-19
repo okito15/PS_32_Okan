@@ -1,0 +1,13 @@
+28/02/2022 09:40:55;vasil123;ADMIN;Login successful
+28/02/2022 09:41:32;vasil123;ADMIN;ActiveTo changed for user student1
+28/02/2022 09:45:29;vasil123;ADMIN;Login successful
+28/02/2022 09:49:30;vasil123;ADMIN;Login successful
+28/02/2022 09:50:59;vasil123;ADMIN;Login successful
+28/02/2022 09:57:23;vasil123;ADMIN;Login successful
+28/02/2022 09:57:33;vasil123;ADMIN;Role changed for user student1
+28/02/2022 11:38:50;vasil123;ADMIN;Login successful
+28/02/2022 11:43:46;vasil123;ADMIN;Login successful
+28/02/2022 11:47:27;vasil123;ADMIN;Login successful
+28/02/2022 11:48:16;vasil123;ADMIN;Login successful
+13/03/2022 16:10:15;vasil123;ADMIN;Login successful
+13/03/2022 19:27:54;vasil123;ADMIN;Login successful

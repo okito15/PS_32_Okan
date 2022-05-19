@@ -1,0 +1,31 @@
+﻿<Window x:Class="StudentInfoSystem.LogInView.LogIn"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ViewModel="clr-namespace:StudentInfoSystem.LogInVM"
+        mc:Ignorable="d"
+        Title="Log in" Height="310" Width="350">
+    <Window.DataContext>
+        <ViewModel:Presenter/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition MaxHeight="100"></RowDefinition>
+            <RowDefinition MaxHeight="100"></RowDefinition>
+            <RowDefinition MaxHeight="40"></RowDefinition>
+            <RowDefinition MaxHeight="40"></RowDefinition>
+        </Grid.RowDefinitions>
+        <GroupBox Grid.Column="0" Grid.Row="0" Header="Username" Margin="20">
+            <TextBox Text="{Binding Path=Username}"></TextBox>
+        </GroupBox>
+        <GroupBox Grid.Column="0" Grid.Row="1" Header="Password" Margin="20">
+            <TextBox Text="{Binding Path=Password}"></TextBox>
+        </GroupBox>
+        <Button Grid.Column="0" Grid.Row="2" MaxWidth="90" MaxHeight="40" Command="{Binding LogInCommand}">Submit</Button>
+        <Button Grid.Column="0" Grid.Row="3" Click="TestStudentsIfEmpty">Check whether student count is zero</Button>
+    </Grid>
+</Window>
